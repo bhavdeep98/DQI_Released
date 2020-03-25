@@ -1,0 +1,46 @@
+<!-- Bootstrap v3.0.3 -->
+<link href="https://s3.amazonaws.com/mturk-public/bs30/css/bootstrap.min.css" rel="stylesheet" />
+<section class="container" id="DataCollection" style="margin-bottom:15px; padding: 10px 10px; font-family: Verdana, Geneva, sans-serif; color:#333333; font-size:0.9em;">
+<div class="row col-xs-12 col-md-12"><!-- Instructions -->
+<div class="panel panel-primary">
+<div class="panel-heading"><strong>Instructions</strong></div>
+
+<div class="panel-body">
+<p>The&nbsp;<a href="http://nlp.stanford.edu/" target="_blank">Stanford University NLP Group</a>&nbsp;is collecting data for use in research on computer understanding of English. We appreciate your help!</p>
+
+<p>We will show you the caption for a photo. We will not show you the photo. Using only the caption and what you know about the world:</p>
+
+<ul>
+<li>Write one alternate caption that is <strong>definitely</strong> a&nbsp;<strong>true</strong><em>&nbsp;</em>description of the photo.</li>
+<li>Write one alternate caption that <strong>might&nbsp;be</strong> a <strong>true</strong> description of the photo.</li>
+<li>Write one alternate caption that is&nbsp;<strong>definitely </strong>a&nbsp;<strong>false</strong>&nbsp;description of the photo.</li>
+</ul>
+</div>
+</div>
+
+<p><strong>Photo caption&nbsp;<span style="font-family:verdana,geneva,sans-serif;"><span style="color:#0000CD;"><span style="">${caption}</span><span style="display: none;">${captionID}</span></span></span></strong></p>
+<label>Definitely correct &nbsp; &nbsp;</label><span style="color:#696969;"><span style="font-family: Verdana, Geneva, sans-serif; ">Example: For the caption <em>"</em></span><span class="s1"><em>Two dogs are running through a field."</em> you could write <em>"There are animals outdoors.</em></span><em><span style="font-family: Verdana, Geneva, sans-serif; ">"</span></em></span>
+
+<div><input class="form-control" id="correct" name="correct" placeholder="Write a sentence that follows from the given caption." required="" style="font-family: Verdana, Geneva, sans-serif; width: 920px;" type="text" /></div>
+<br />
+<label style="font-family: Verdana, Geneva, sans-serif; ">Maybe correct &nbsp;&nbsp;</label><span style="color:#696969;"><span style="font-family: Verdana, Geneva, sans-serif; ">Example: For the caption&nbsp;<em>"</em></span><span class="s1" style="font-family: Verdana, Geneva, sans-serif; "><em>Two dogs are running through a field."</em>&nbsp;you could write<em>&nbsp;"</em></span><em><span class="s1">Some puppies are running to catch a stick.</span><em style="font-family: Verdana, Geneva, sans-serif; "><span style="">"</span></em></em></span>
+
+<div><input class="form-control" id="maybe" name="maybe" placeholder="Write a sentence which may be true given the caption, and may not be." required="" style="font-family: Verdana, Geneva, sans-serif; width: 920px;" type="text" /></div>
+<br />
+<span style="font-weight: bold; ">Definitely incorrect &nbsp;&nbsp;</span><span style="color:#696969; font-family: Verdana, Geneva, sans-serif; ">Example: For the caption&nbsp;<em>"Two dogs are running through a field."</em>&nbsp;you could write<em>&nbsp;"The pets are sitting on a couch."</em> This is different from the <em>maybe correct</em> category because its impossible for the dogs to be both running and sitting.</span>
+
+<div><em><em><input class="form-control" id="incorrect" name="incorrect" placeholder="Write a sentence which contradicts the caption." required="" style="font-family: Verdana, Geneva, sans-serif; width: 920px;" type="text" /></em></em></div>
+<br />
+<em><em><span style="color:#A9A9A9;"><span style="font-weight: bold; ">Problems (optional)&nbsp; &nbsp;</span></span></em></em><em style="font-family: Verdana, Geneva, sans-serif; font-size: 11.6999998092651px; line-height: 20.8000011444092px; color: rgb(105, 105, 105);"><em>If something is wrong, have a look at the&nbsp;<a href="http://sites.google.com/a/stanford.edu/faq-stanford-nlp-captions-task-on-mturk/" target="_blank">FAQ</a>, do your best above, and let us know here.</em></em><em><em> </em> </em>
+
+<div><em><em><input class="form-control" id="problems" name="problems" placeholder="" style="font-family: Verdana, Geneva, sans-serif; width: 920px;" type="text" /><span style="font-size: 0.9em; line-height: 1.6em;">&nbsp;</span><span style="font-size: 0.9em; line-height: 1.6em;">&nbsp;</span></em></em></div>
+<em> <em> </em></em></div>
+</section>
+
+<p><em><em><!-- close container -->
+<style type="text/css">td {
+    font-size:1.0em;
+    padding: 5px 5px;
+}
+</style>
+</em></em></p>

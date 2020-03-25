@@ -1,0 +1,230 @@
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<button class="openbtn" onclick="openNav()" style="width:20%;height:58%;left:1%;top:1.5%;position:absolute; font-size:20px;box-shadow: 0px 6px 0px #98b4d4, 0px 3px 15px rgba(0,0,0,.4);font-family:Courier,monotype;">☰ Instructions</button>  
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<div id="sidebar" class="sidebar">
+<text style="font-family:Courier,monotype;color:white;top:-5%;position:relative; left:2%;font-weight:bold;font-size:20px;">Instructions</text>
+<a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="color:white;">×</a>
+<div id="IFI">
+<pre>
+
+ <b><u>Interface Instructions:</b></u>
+ 
+ <u><i>MAIN</i></u> 
+ 1. Read the <text style="color:red;background-color:#ffffd8;">data creation</text> instructions, and fill in the text areas accordingly.
+ 2. Hover over the quality panel to understand each parameter of quality.
+ 3. Parameter colors:
+       - <text style="color:white;background-color:red;">Red</text> : Bad : Sample Modification Recommended
+       - <text style="color:white;background-color:orange;">Orange</text> : Mediocre : Sample Modification at User Discretion
+       - <text style="color:white;background-color:green;">Green</text> : Good : Sample Modification Not Required
+ 4. The <text style="color:black;background-color:#d0f0c0;">accept/</text><text style="color:black;background-color:#ffa6a6;">reject</text> field indicates the probability that your sample will be accepted if 
+    submitted as is without modification.
+ 5. The <text style="color:red;background-color:#ffffd8;">pie chart</text> shows the percentage of samples accepted and rejected on hover.
+ 6. The  number of samples that have not yet been reviewed for acceptance, by the
+    administrator are shown in the <text style="color:red;background-color:#ffffd8;">pending review</text> box 
+
+ <u><i>MORE DETAILS</i></u> 
+ 1. The <text style="color:red;background-color:#ffffd8;">line chart</text> indicates the quality of each sample you have submitted over time.
+ 2. Hovering on the points of the line chart shows the parameter-wise colored stats of the
+    sample, and whether it's been accepted or rejected.
+ 3. Clicking on the points of the line chart pulls up the respective sample.
+ 4. The <text style="color:red;background-color:#ffffd8;">rank list</text> shows the ranks of all crowd source workers, in terms of
+    the percentage of good samples created.
+
+</pre>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div id="TI">
+<pre>
+
+ <b><u>Data Creation Instructions:</b></u>
+
+ 1. View the: 
+       <text style="color:red;background-color:#ffffd8;">PREMISE</text>: Generated caption from system
+    and enter alternate captions as follows:
+       <text style="color:red;background-color:#ffffd8;">HYPOTHESIS A</text>: Alternate caption from user that is definitely true.
+       <text style="color:red;background-color:#ffffd8;">HYPOTHESIS B</text>: Alternate caption from user that may or may not be true.
+       <text style="color:red;background-color:#ffffd8;">HYPOTHESIS C</text>: Alternate caption from user that is definitely not true.
+ 2. Click the <text style="color:black;background-color:#95b3d7;">Review</text> button to check sample quality (you can review the sample prior to
+    final submission as many times as you want).
+ 3. You can submit the sample at any time by clicking on the <text style="color:black;background-color:#95b3d7;">Submit</text> button.
+ 4. The <text style="color:#d5e1ef;background-color:#595959;">New Premise</text> button generates a new premise.
+ 5. Click on the <text style="color:#d5e1ef;background-color:#595959;">Clear</text> button to clear all fields.
+ 6. The <text style="color:#d5e1ef;background-color:#595959;">Autofix</text> button auto-modifies the sample.
+ 7. Click on the <text style="color:#d5e1ef;background-color:#595959;">Undo</text> button to reverse the last auto-fix operation.
+
+</pre>
+</div>
+</div>
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div id="Q">
+<div id="inplaceinstructions" style="border-style: solid solid solid solid;border-color:#595959; left:5%;top:5%;position:absolute; width:65%;height:50%;">
+<pre style="position:relative; left:25px;font-size:12px;">
+<b><u>We will show you the caption for a photo. We will not show
+you the photo. Using only the caption and what you know
+about the world:</u></b>
+
+<b>A)Write one alternate caption that is definitely a true 
+description of the photo.</b>
+<i>Example: For the caption:“Two dogs are running through
+a field.”you could write “There are animals outdoors.”</i>
+
+<b>B)Write one alternate caption that might be a true 
+description of the photo.</b>
+<i>Example: For the caption “Two dogs are running through
+a field.” you could write “Some puppies are running to
+catch a stick.”</i>
+
+<b>C)Write one alternate caption that is definitely a false 
+description of the photo.</b>
+<i>Example: For the caption “Two dogs are running through
+a field.”you could write “The pets are sitting on a
+couch.” This is different from the maybe correct category
+because it’s impossible for the dogs to be both running
+and sitting.
+</i>
+</pre>
+</div>
+<button id="New Premise" style="width:20%;height:10%;left:75%;top:10%;position:absolute; font-size:20px;box-shadow: 0px 6px 0px #606060, 0px 3px 15px black;font-family:Courier,monotype;background-color:#595959;cursor:pointer;color:#d5e1ef;  
+">New Premise</button>
+<button id="Clear" style="width:20%;height:10%;left:75%;top:20%;position:absolute; font-size:20px;box-shadow: 0px 6px 0px #d4d4d4, 0px 3px 15px rgba(0,0,0,.4);font-family:Courier,monotype;background-color:#595959;cursor:pointer;color:#d5e1ef;">Clear</button>
+<button id="Autofix" style="width:20%;height:10%;left:75%;top:30%;position:absolute; font-size:20px;box-shadow: 0px 6px 0px #d4d4d4, 0px 3px 15px rgba(0,0,0,.4);font-family:Courier,monotype;background-color:#595959;cursor:pointer;color:#d5e1ef;">Autofix</button>
+<button id="Undo" style="width:20%;height:10%;left:75%;top:40%;position:absolute; font-size:20px;box-shadow: 0px 6px 0px #d4d4d4, 0px 3px 15px rgba(0,0,0,.4);font-family:Courier,monotype;background-color:#595959;cursor:pointer;color:#d5e1ef;">Undo</button>
+<div id="sentences" style="border-style: solid solid solid solid;border-color:#595959; left:5%;top:58%;position:absolute; width:90%;height:30%;background-color:#595959;">
+<div id="pl" style="top:11%;height:16%;position:absolute; left:2%;width:12.5%;font-family:Courier,monotype;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);">
+<text style="position:relative;left:15px;top:5px;font-size:12px;color:#95b3d7;font-weight:bold;">PREMISE</text></div>
+<textarea id="p" style="left:15%;top:10%;height:15%;width:60%;overflows:scroll; resize:none;position:absolute;background-color:#95b3d7;"></textarea>
+<div id="hal" style="top:32%;height:16%;position:absolute; left:2%;width:12.5%;font-family:Courier,monotype;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);">
+<text style="position:relative;left:4px;top:5px;font-size:10px;color:#d5e1ef;font-weight:bold;">HYPOTHESIS A</text></div>
+<textarea id="ha" style="left:15%;top:31%;height:15%;width:60%;overflows:scroll; resize:none;position:absolute;background-color:#d5e1ef;"></textarea>
+<div id="hbl" style="top:53%;height:16%;position:absolute; left:2%;width:12.5%;font-family:Courier,monotype;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);">
+<text style="position:relative;left:4px;top:5px;font-size:10px;color:#d5e1ef;font-weight:bold;">HYPOTHESIS B</text></div>
+<textarea id="hb" style="left:15%;top:52%;height:15%;width:60%;overflows:scroll; resize:none;position:absolute;background-color:#d5e1ef;"></textarea>
+<div id="hcl" style="top:74%;height:16%;position:absolute; left:2%;width:12.5%;font-family:Courier,monotype;box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);">
+<text style="position:relative;top:5px;left:4px;font-size:10px;color:#d5e1ef;font-weight:bold;">HYPOTHESIS C</text></div>
+<textarea id="hc" style="left:15%;top:73%;height:15%;width:60%;overflows:scroll; resize:none;position:absolute;background-color:#d5e1ef;"></textarea>
+<button id="Review" style="width:20%;height:80%;left:78%;top:10%;position:absolute; font-size:20px;box-shadow: 0px 6px 0px #98b4d4, 0px 3px 15px rgba(0,0,0,.4);font-family:Courier,monotype;background-color:#95b3d7;cursor:pointer;color:black;">Review</button>
+</div>
+<button id="Submit" style="width:91%;height:7%;left:5%;top:90%;position:absolute; font-size:20px;box-shadow: 0px 6px 0px #98b4d4, 0px 3px 15px rgba(0,0,0,.4);font-family:Courier,monotype;background-color:#95b3d7;cursor:pointer;color:#black;">Submit</button>
+
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div id="DQI">
+<span class="dot" id="r1"></span>
+<span class="dot" id="o1"></span>
+<span class="dot" id="g1"></span>
+<br/>
+<span class="dot" id="r2"></span>
+<span class="dot" id="o2"></span>
+<span class="dot" id="g2"></span>
+<br/>
+<span class="dot" id="r3"></span>
+<span class="dot" id="o3"></span>
+<span class="dot" id="g3"></span>
+<br/>
+<span class="dot" id="r4"></span>
+<span class="dot" id="o4"></span>
+<span class="dot" id="g4"></span>
+<br/>
+<span class="dot" id="r5"></span>
+<span class="dot" id="o5"></span>
+<span class="dot" id="g5"></span>
+<br/>
+<text style="font-family:Courier,monotype;font-size:12px;position:relative;top:18%;left:4%;font-weight:bold;">Accept</text>
+<text style="font-family:Courier,monotype;font-size:12px;position:relative;top:18%;left:68%;font-weight:bold;">Reject</text>
+<div id="AR" style="position:relative; top:6%;left:20%;width:60%;height:12%;border:inset;">
+<div id="accept" style="width:50%;height:100%;background-image:linear-gradient(#90ee90, #d0f0c0);text-align:center;vertical-align:middle;font-family:Courier,monotype;"><text style="position:relative; top:5px;">Accept</text></div>
+<div id="reject" style="width:50%;height:100%;position:relative;top:-100%;left:50%;background-image:linear-gradient(#ffa6a6, #ff7f7f);text-align:center;vertical-align:middle;font-family:Courier,monotype;"><text style="position:relative; top:5px;">Reject</text></div>
+</div>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div id="PIE">
+<text style="font-family:Courier,monotype;font-size:16px;position:relative;top:4%;left:5%;font-weight:bold;">Submitted-Sample Distribution</text>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<div id="Login">
+<a style="position:relative; top:10px;left:15px;font-family:Courier,monotype;" href="https://www.google.com">Report Errors</a><br/>
+<a style="position:relative; top:20px;left:65px;font-family:Courier,monotype;" href="https://www.quora.com">FAQ</a>
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<button type="button" class="collapsible" id="more">More Details</button>
+<div class="content" id="morepanel">
+Line chart, question display on click box, rank list, count box, pending review box
+</div>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="./scripts/d3/d3.queue.js"></script>
+<script src="./scripts/dqi.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+function openNav() {
+  document.getElementById("sidebar").style.width = "41%";
+  document.getElementById("Q").style.left = "41%";
+  document.getElementById("DQI").style.left = "82%";
+  document.getElementById("Login").style.left = "82%";
+  document.getElementById("PIE").style.left = "82%";
+  document.getElementById("more").style.width = "98%";
+  document.getElementById("morepanel").style.width = "96%";
+}
+
+function closeNav() {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("Q").style.left = "22%";
+  document.getElementById("DQI").style.left = "63%";
+  document.getElementById("Login").style.left = "63%";
+  document.getElementById("PIE").style.left = "63%";
+  document.getElementById("more").style.width = "79%";
+  document.getElementById("morepanel").style.width = "77%";
+}
+</script>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+</body>
+</html>
+
+<!----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+

@@ -1,0 +1,146 @@
+.dot {
+  height: 30px;
+  width: 30px;
+  background-color: #606060;
+  border-radius: 50%;
+  display: inline-block;
+  position:relative;
+  top:10%;
+  left:6%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+}
+.sidebar {
+  height: 55%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #606060;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidebar .closebtn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.openbtn {
+  font-family:Courier,monotype;
+  cursor: pointer;
+  background-color: #95b3d7;
+  color: black;
+}
+
+.openbtn:hover {
+  background-color: #5384be;
+}
+
+button:hover {
+  background-color: black;
+}
+#TI{
+left:2%;
+top:-8%;
+width:97%;
+background-color:#d5e1ef;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+position:relative;
+}
+
+#IFI{
+left:2%;
+top:-7%;
+width:97%;
+background-color:#d5e1ef;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+position:relative;
+}
+
+body{
+background-color:#595959;
+}
+
+#Q{
+width:40%;
+height:58%;
+background-color:#d5e1ef;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+position:absolute;
+left:22%;
+top:1.5%;
+transition: .5s;
+}
+
+#DQI{
+width:17%;
+height:25%;
+background-color:#d5e1ef;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+position:absolute;
+left:63%;
+top:10%;
+transition: .5s;
+}
+
+#PIE{
+width:17%;
+height:23.5%;
+background-color:#d5e1ef;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+position:absolute;
+left:63%;
+top:36%;
+transition: .5s;
+}
+
+#Login{
+width:17%;
+height:7.5%;
+background-color:#d5e1ef;
+box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+position:absolute;
+left:63%;
+top:1.5%;
+transition: .5s;
+}
+
+.collapsible {
+  background-color: #95b3d7;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 79%;
+  top:61%;
+  left:1%;
+  position:absolute;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: Consolas,monospace;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  transition: .5s;
+  color:black;
+}
+
+.active, .collapsible:hover {
+  background-color: #5384be;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #d5e1ef;
+  height:32%;
+  width:77%;
+  left:1%;
+  position:absolute;
+  top:66%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  transition: .5s;
+}
