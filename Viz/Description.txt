@@ -1,1 +1,24 @@
+Crowd Source Worker
 
+The UI design choices are heavily focused on the notion of providing simple, yet critical feedback to the crowd source worker, to enhance the quality of data created by means of minimizing spurious bias. The methods and principles used in building the interface used for SNLI's \cite{bowman2015large} data collection process are the basis of our interface design. There are two types of feedback given in the UI, pre-submission and post-submission of the sample.
+
+A sliding panel instruction tab is on the left corner of the screen. It consists of two sets of instructions. The first set goes over all general interface functionality descriptions, including post-submission user feedback. The second set specifically focuses on the pre-submission feedback loop.
+
+Pre-Submission Feedback Loop
+
+After reviewing the main instruction panel, the user can begin data creation. There is an instructions box displayed at all times on the main creation panel, which gives examples used in the original SNLI interface design, to make users understand the nature of the samples they are required to create. The premise field is auto-filled with captions from the Flickr30k corpus. This field can be changed to a fresh premise at any time by clicking on the 'new premise' button. The 3 types of hypothesis (entailment, neutral, and contradiction) must be entered in their respective fields. These can be cleared at any time by clicking the 'clear' button.
+
+Once entered, the user must click the 'Review' button at least once before submitting. The 'Review' button populates the DQI indication panel, which displays the values of the DQI parameters with respect to both the newly created sample and the existing set of accepted samples. The values are indicated using a traffic signal analogy (red, yellow, and green), thereby indicating if a particular aspect of the data created might lead to bias. The colors respectively advise the user to stop, revise, and proceed in their sample creation tactics. The probability of the newly created sample being accepted/rejected is also displayed. Based on this feedback, the user can choose to: (i) manually fix their sample and review it again, (ii) 'auto-fix' the sample by paraphrasing it using concept net, (iii) submit the sample as is. Once the user is satisfied with the sample created, they can submit the sample.
+
+Post-Submission Feedback Loop
+
+Once the sample has been submitted, the secondary (minimizable) panel's 'pending review' box is accordingly updated, as is the 'count' box for total number of submitted samples. We retain the notion of a background expert reviewing samples to ensure that the sentences use appropriate ideas and language. Once the analyst reviews the sample and marks it as accepted/rejected (see section 6.2), the following updates occur on the crowdsource worker's UI \footnote{these updates are only loaded at the start of each new user login session} :
+
+(i) The line chart on the secondary panel indicates the quality of the user's submitted samples over time. It is color coded according to whether the sample was accepted or rejected. On hovering over any one sample, the parameter levels of that sample are displayed on a tooltip. On click the sample appears in a text box.
+(ii) The 'pending review' box count is decremented by one.
+(iii) The rank list is updated according to the percentage of accepted samples created by each user.
+(iv) The pie chart on the main panel is updated according to the accept/reject percentages.
+
+Additional Communication Links
+
+There are additional FAQ and Reporting Problem links present in the interface. The FAQs deal with data creation guidelines, and the Reporting Problems form is intended for technical issues only. This is in accordance with similar functionalities from the original SNLI interface.
