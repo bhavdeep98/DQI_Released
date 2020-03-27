@@ -7,5 +7,5 @@ Neural language models have achieved human level performance across several NLP 
 **RAFLite**: Proposed Adversarial Filtering Algorithm implementation\
 **Viz**: UI work to incorporate DQI for providing feedback to data creators\
 **Papers**: List of papers read for identifying paramters along with their summaries in the excel sheet\
-**Pre Analysis Images**: Plots showing quality of various datasets we consider\
+**Pre Analysis Images**: Plots showing quality of various datasets we consider
 
