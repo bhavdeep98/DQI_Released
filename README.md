@@ -4,8 +4,8 @@ Neural language models have achieved human level performance across several NLP 
 
 **Repository Structure**:\
 **AFLite Implementation Python Notebook**: Our implementation of AFLite mentioned in Winogrande paper.\
-**RAFLite**: Proposed Adversarial Filtering Algorithm implementation\
-**Viz**: UI work to incorporate DQI for providing feedback to data creators\
-**Papers**: List of papers read for identifying paramters along with their summaries in the excel sheet\
-**Pre Analysis Images**: Plots showing quality of various datasets we consider
+**RAFLite**: Proposed Adversarial Filtering Algorithm implementation.\
+**Viz**: UI work to incorporate DQI for providing feedback to data creators.\
+**Papers**: List of papers read for identifying paramters along with their summaries in the excel sheet.\
+**Pre Analysis Images**: Plots showing quality of various datasets we consider.
 
