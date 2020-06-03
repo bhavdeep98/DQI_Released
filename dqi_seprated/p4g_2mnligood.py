@@ -36,9 +36,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 from numba import jit, cuda
 
 #from numpy import genfromtxt
-#gwords = genfromtxt('/home/srmishr1/MNLI/Anjana/dev_good_words.csv', delimiter=',')
+#gwords = genfromtxt('/home/user1/MNLI/Anjana/dev_good_words.csv', delimiter=',')
 
-gwords=pd.read_csv("/home/srmishr1/MNLI/Anjana/mnli_dev_bad.csv")
+gwords=pd.read_csv("/home/user1/MNLI/Anjana/mnli_dev_bad.csv")
 #print(gwords)
 #print(gwords.columns)
 #sentence = sentence.to_numpy()
@@ -86,9 +86,9 @@ def parameter4(sentence,size,WSIML):
         lists.append(arr)
         vals.append(size/sl)
     df=pd.DataFrame(lists)
-    df.to_csv("/home/srmishr1/MNLI/Anjana/mnligood_wordsimgabs.csv")
+    df.to_csv("/home/user1/MNLI/Anjana/mnligood_wordsimgabs.csv")
     df=pd.DataFrame(vals)
-    df.to_csv("/home/srmishr1/MNLI/Anjana/mnligood_dqic4gabs.csv")  
+    df.to_csv("/home/user1/MNLI/Anjana/mnligood_dqic4gabs.csv")  
 
 size=len(gwords)
 WSIML=0.5

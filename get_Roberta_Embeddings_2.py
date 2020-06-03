@@ -4,7 +4,7 @@ from tqdm import tqdm, tnrange
 import pandas as pd
 
 #tokenizer = RobertaTokenizer.from_pretrained('roberta-large')
-tokenizer = RobertaTokenizer.from_pretrained('/scratch/srmishr1/tfool_1/')
+tokenizer = RobertaTokenizer.from_pretrained('/scratch/user1/tfool_1/')
 
 ## Read the file and encode the words
 df = pd.read_csv('words_sentences.csv')
@@ -45,7 +45,7 @@ sent_id_tensors = []
 for sent_id in sent_ids:
     sent_id_tensors.append(torch.LongTensor(sent_id))
 
-model = RobertaModel.from_pretrained('/scratch/srmishr1/tfool_1/', output_hidden_states=True)
+model = RobertaModel.from_pretrained('/scratch/user1/tfool_1/', output_hidden_states=True)
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 model = model.to(device)

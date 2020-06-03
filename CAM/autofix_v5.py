@@ -315,7 +315,7 @@ def read_data(filepath, data_size, target_model='infersent', lowercase=False, ig
                                if w not in stopwords])
                 labels.append(labeldict[line[0]])
             except:
-                with open("/scratch/srmishr1/results/skippedLines.txt","a") as f:
+                with open("/scratch/user1/results/skippedLines.txt","a") as f:
                     f.write(' '.join(line))
                 continue
 

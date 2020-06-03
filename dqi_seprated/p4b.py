@@ -35,7 +35,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 from numba import jit, cuda
 
-gwords=pd.read_csv("/home/srmishr1/MNLI/Anjana/dev_bad_words.csv")
+gwords=pd.read_csv("/home/user1/MNLI/Anjana/dev_bad_words.csv")
 
 nlp = spacy.load("en_trf_bertbaseuncased_lg")
 
@@ -63,9 +63,9 @@ def parameter4(sentence,size,WSIML):
         lists.append(arr)
         vals.append(size/sl)
     df=pd.DataFrame(lists)
-    df.to_csv("/home/srmishr1/MNLI/Anjana/wordsimbabs.csv")
+    df.to_csv("/home/user1/MNLI/Anjana/wordsimbabs.csv")
     df=pd.DataFrame(vals)
-    df.to_csv("/home/srmishr1/MNLI/Anjana/dqic4babs.csv")  
+    df.to_csv("/home/user1/MNLI/Anjana/dqic4babs.csv")  
 
 size=len(gwords)
 WSIML=0.5
